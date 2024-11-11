@@ -17,6 +17,6 @@ jobs:
           cd vaultwarden
           wget https://github.com/tttapa/docker-arm-cross-toolchain/releases/download/1.0.0/x-tools-armv6-rpi-linux-gnueabihf-gcc12.tar.xz
           tar xvf x-tools*.tar.xz
-          export CARGO_ARMV7_UNKNOWN_LINUX_GNUABIHF_LINKER=x-tools/armv6-rpi-linux-gnuabihf/bin/armv6-rpi-linux-gnuabihf-gcc
+          export CARGO_TARGET_ARMV7_UNKNOWN_LINUX_GNUEABIHF_LINKER=x-tools/armv6-rpi-linux-gnuabihf/bin/armv6-rpi-linux-gnuabihf-gcc
           rustup target add armv7-unknown-linux-gnueabihf
           cargo build --features sqlite --target=armv7-unknown-linux-gnueabihf --release --features vendored_openssl
