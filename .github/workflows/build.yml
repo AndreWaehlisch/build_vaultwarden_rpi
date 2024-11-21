@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-	  ref: 1.32.5
           repository: dani-garcia/vaultwarden
           path: vaultwarden
+          ref: 1.32.5
       - name: build
         run: |
           cd vaultwarden
